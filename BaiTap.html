@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Tập</title>
+</head>
+<body>
+    <h1>Bài 1</h1>
+    <input type="text" id="name" oninput="HelloName()">
+    <h2 id="ten"></h2>
+    <script>
+        // Nhập tên c1
+        let name = prompt("Nhập tên của bạn: ");
+        
+
+        // Xuất tên
+        alert("Xin Chào: "+ name); // Xuất tên c1
+        console.log("Xin Chào: "+ name); // Xuất tên c2
+        document.write("Xin Chào: "+ name); // Xuất tên c3
+        function HelloName()
+        {
+            let name1 = document.getElementById("name").value; // Nhập tên c2
+            document.getElementById("ten").innerHTML = "Xin Chào: "+ name1; // Xuất tên c4
+        }
+    </script>
+
+    <h1>Bài 2</h1>
+    <div>
+        <h2 id="Result">Kết quả của phép tính a + b - c / d (với a = 1, b = 2, c = 10, d = 21) là: </h2>
+        <button onclick="VisualResult()">Xem kết quả !!!</button>
+    </div>
+    <script>
+        let a = 1, b = 2, c = 10, d = 21, result;
+        result = a + b - c / d;
+        // In ra c1
+        alert("Kết quả của phép tính a + b - c / d (với a = 1, b = 2, c = 10, d = 21) là: "+ result);
+        // In ra c2
+        console.log("Kết quả của phép tính a + b - c / d (với a = 1, b = 2, c = 10, d = 21) là: "+ result);
+        // In ra c3
+        document.write("Kết quả của phép tính a + b - c / d (với a = 1, b = 2, c = 10, d = 21) là: "+ result);
+        // In ra c4
+        function VisualResult()
+        {
+            document.getElementById("Result").innerHTML += result;
+        }
+    </script>
+</body>
+</html>
